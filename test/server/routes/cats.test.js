@@ -1,13 +1,13 @@
 const request = require('supertest')
 
-jest.mock('../../server/db/catsDb', () => ({
+jest.mock('../../../server/db/catsDb', () => ({
   getCats: () => Promise.resolve([
     {id: 1, name: 'test name 1'},
     {id: 2, name: 'test name 2'}
   ])
 }))
 
-const server = require('../../server/server')
+const server = require('../../../server/server')
 
 test('GET /', () => {
   return request(server)

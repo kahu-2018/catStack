@@ -12,9 +12,7 @@ export const getCharacteristicsRequest = () => {
     request
       .get('/api/characteristics')
       .end((err, res) => {
-        console.log({err, res});
         if (err) {
-          console.log(err)
           return
         }
         dispatch(receiveCharacteristics(res.body))

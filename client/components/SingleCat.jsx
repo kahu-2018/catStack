@@ -8,7 +8,6 @@ import {deleteCatRequest} from '../actions/catActions'
 class SingleCat extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props);
     this.state = {
       cat: props.cat || null,
       showEdit: false
@@ -46,7 +45,6 @@ class SingleCat extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(props.match.params.id);
   return {
     cat: state.cats.find(cat => cat.id == props.match.params.id)
   }

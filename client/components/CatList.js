@@ -22,7 +22,6 @@ class CatList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {cats: state.cats}
 
 }

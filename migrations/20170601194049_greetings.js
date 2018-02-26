@@ -8,10 +8,5 @@ exports.up = function(knex, Promise) {
 }
 
 exports.down = function(knex, Promise) {
-<<<<<<< HEAD
   return knex.schema.dropTableIfExists('cats')
-};
-=======
-  return knex.schema.dropTableIfExists('greetings')
 }
->>>>>>> bccedf20e633f35abaeb3d0bd1d818b81df80c5c

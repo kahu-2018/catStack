@@ -26,7 +26,6 @@ router.delete('/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  console.log(req.body);
   let db = req.app.get('db')
   delete req.body.description
 

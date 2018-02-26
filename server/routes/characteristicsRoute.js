@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body);
   let db = req.app.get('db')
   characteristicsDb.insertCharacteristic(req.body, db)
     .then(characteristic => res.json(characteristic))
